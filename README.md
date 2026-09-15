@@ -18,7 +18,7 @@ Restart your MCP client after registration. If its CLI is unavailable, use `brow
 
 ## Install and connect the extension
 
-Browpilot 0.2.0 was submitted to Chrome Web Store on September 14, 2026 (UTC) and is pending review, with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
+Browpilot 0.2.0 was submitted to Chrome Web Store on September 15, 2026 (UTC) and is pending review, with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
 
 1. Ask your AI client to call `browser_list_instances`.
 2. Choose an exact local instance ID and call `browser_open_instance`.
