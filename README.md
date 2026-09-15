@@ -27,7 +27,7 @@ The Chrome Web Store listing is being prepared. Until it is available, run `brow
 
 For a custom installation, use `browser_register_instance` with its executable, user-data directory and profile directory. Installed, enabled and connected are separate states. Once paired, calls to a selected offline profile can reopen it. Refresh tabs and snapshots after restart; old tab IDs and element references can no longer be trusted. Already-dispatched mutations are never automatically replayed.
 
-`browser_install_extension` opens a configured store page or the browser's extension settings; installation requires confirmation in the browser. Store builds require their real extension ID in the companion allowlist. Configuration is retained at `~/.claude-browser/config.json` for upgrade compatibility.
+`browser_install_extension` opens a configured store page or the browser's extension settings; installation requires confirmation in the browser. The assigned Chrome Store ID `kglhakgapoegbnnbobnmnebmbljehcid` is included in the companion defaults; additional store IDs can be configured in its allowlist. Configuration is retained at `~/.claude-browser/config.json` for upgrade compatibility.
 
 ## Grok and other remote clients
 
@@ -49,7 +49,7 @@ Daily default directories are refused by developer launch. Normal profile startu
 
 ## Validation and privacy
 
-Version 0.2.0 passed 333 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
+Version 0.2.0 passed 337 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
 
 See [Privacy policy](privacy.md). Tool results reach the MCP client and its AI provider; remote access also uses the tunnel/proxy you configure. No built-in analytics or hosted collection service is included.
 
