@@ -18,7 +18,7 @@ Restart your MCP client after registration. If its CLI is unavailable, use `brow
 
 ## Install and connect the extension
 
-The Chrome Web Store listing is being prepared. Until it is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
+Browpilot 0.2.0 was submitted to Chrome Web Store on September 14, 2026 (UTC) and is pending review, with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
 
 1. Ask your AI client to call `browser_list_instances`.
 2. Choose an exact local instance ID and call `browser_open_instance`.
@@ -46,6 +46,14 @@ Every request to `http://127.0.0.1:8788/mcp` needs `Authorization: Bearer <your-
 Use `browser_developer`: `launch` a dedicated Chromium profile or `connect` an already-enabled loopback CDP port, then `targets` → `attach` → `contexts` → `evaluate`. Provide the actual target session and execution context. `command` supports breakpoints, script source, Runtime and Network CDP commands; `events` returns a bounded event buffer.
 
 Daily default directories are refused by developer launch. Normal profile startup uses `browser_open_instance`. Loading an unpacked extension by launch flag is browser/version dependent; Chromium or Chrome for Testing is suitable. There is no claim of unrestricted access to every protected browser context.
+
+## Store status
+
+Chrome: pending review, public/free distribution in all regions, automatic publication after approval. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
+
+Edge: a submission ZIP is available in the release; no Edge store approval or publication is claimed.
+
+See [review setup instructions](TESTING.md) for a direct MCP test without an AI provider account.
 
 ## Validation and privacy
 
