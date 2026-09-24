@@ -18,7 +18,7 @@ Restart your MCP client after registration. If its CLI is unavailable, use `brow
 
 ## Install and connect the extension
 
-Browpilot 0.2.1 removes unused permissions identified during Chrome review. The revised store submission is being prepared. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
+Browpilot 0.2.1 removes unused permissions identified during Chrome review. Version 0.2.1 was resubmitted on September 24, 2026 (UTC) and is pending review with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
 
 1. Ask your AI client to call `browser_list_instances`.
 2. Choose an exact local instance ID and call `browser_open_instance`.
@@ -49,7 +49,7 @@ Daily default directories are refused by developer launch. Normal profile startu
 
 ## Store status
 
-Chrome: preparing a revised submission after the 0.2.0 permissions rejection. Public/free distribution in all regions and automatic publication after approval are planned. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
+Chrome: version 0.2.1 is pending review after correcting the 0.2.0 permissions rejection. Automatic publication after approval is enabled. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
 
 Edge: a submission ZIP is available in the release; no Edge store approval or publication is claimed.
 
