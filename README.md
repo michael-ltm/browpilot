@@ -9,7 +9,7 @@ This repository distributes the Browpilot companion, extension packages, setup i
 Requires Node.js 20 or newer.
 
 ```sh
-npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.0/john523100-claude-browser-0.2.0.tgz
+npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.1/john523100-claude-browser-0.2.1.tgz
 browpilot install codex
 # Or: browpilot install claude
 ```
@@ -18,7 +18,7 @@ Restart your MCP client after registration. If its CLI is unavailable, use `brow
 
 ## Install and connect the extension
 
-Browpilot 0.2.0 was submitted to Chrome Web Store on September 15, 2026 (UTC) and is pending review, with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
+Browpilot 0.2.1 removes unused permissions identified during Chrome review. The revised store submission is being prepared. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
 
 1. Ask your AI client to call `browser_list_instances`.
 2. Choose an exact local instance ID and call `browser_open_instance`.
@@ -49,7 +49,7 @@ Daily default directories are refused by developer launch. Normal profile startu
 
 ## Store status
 
-Chrome: pending review, public/free distribution in all regions, automatic publication after approval. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
+Chrome: preparing a revised submission after the 0.2.0 permissions rejection. Public/free distribution in all regions and automatic publication after approval are planned. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
 
 Edge: a submission ZIP is available in the release; no Edge store approval or publication is claimed.
 
@@ -57,7 +57,7 @@ See [review setup instructions](TESTING.md) for a direct MCP test without an AI 
 
 ## Validation and privacy
 
-Version 0.2.0 passed 337 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
+Version 0.2.1 passed 337 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
 
 See [Privacy policy](privacy.md). Tool results reach the MCP client and its AI provider; remote access also uses the tunnel/proxy you configure. No built-in analytics or hosted collection service is included.
 

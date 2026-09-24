@@ -1,6 +1,6 @@
 # Browpilot privacy policy
 
-Effective version: 0.2.0. Browpilot was previously named claude-browser.
+Effective version: 0.2.1. Browpilot was previously named claude-browser.
 
 Browpilot connects a browser extension to a local companion so an AI client selected by you can operate browser profiles and inspect pages. The companion and extension have no built-in hosted data collection service or analytics.
 
