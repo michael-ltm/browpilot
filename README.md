@@ -9,16 +9,16 @@ This repository distributes the Browpilot companion, extension packages, setup i
 Requires Node.js 20 or newer.
 
 ```sh
-npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.1/john523100-claude-browser-0.2.1.tgz
+npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.2/john523100-browpilot-0.2.2.tgz
 browpilot install codex
 # Or: browpilot install claude
 ```
 
-Restart your MCP client after registration. If its CLI is unavailable, use `browpilot config codex` or `browpilot config claude` and copy the generated configuration into your client settings. Both `browpilot` and the legacy `claude-browser` command are provided.
+Restart your MCP client after registration. If its CLI is unavailable, use `browpilot config codex` or `browpilot config claude` and copy the generated configuration into your client settings. The package provides the `browpilot` command; the legacy `claude-browser` command was removed in 0.2.2.
 
 ## Install and connect the extension
 
-Browpilot 0.2.1 removes unused permissions identified during Chrome review. Version 0.2.1 was resubmitted on September 24, 2026 (UTC) and is pending review with automatic publication after approval. Until the listing is available, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
+Install Browpilot from the [Chrome Web Store](https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid). Version 0.2.1 is published there; 0.2.2 was submitted on October 25, 2026 (UTC) and is pending review with automatic publication after approval. For Edge or an unpacked copy, run `browpilot extension-path` and load that directory using Developer mode → Load unpacked at `chrome://extensions` or `edge://extensions`.
 
 1. Ask your AI client to call `browser_list_instances`.
 2. Choose an exact local instance ID and call `browser_open_instance`.
@@ -27,7 +27,7 @@ Browpilot 0.2.1 removes unused permissions identified during Chrome review. Vers
 
 For a custom installation, use `browser_register_instance` with its executable, user-data directory and profile directory. Installed, enabled and connected are separate states. Once paired, calls to a selected offline profile can reopen it. Refresh tabs and snapshots after restart; old tab IDs and element references can no longer be trusted. Already-dispatched mutations are never automatically replayed.
 
-`browser_install_extension` opens a configured store page or the browser's extension settings; installation requires confirmation in the browser. The assigned Chrome Store ID `kglhakgapoegbnnbobnmnebmbljehcid` is included in the companion defaults; additional store IDs can be configured in its allowlist. Configuration is retained at `~/.claude-browser/config.json` for upgrade compatibility.
+`browser_install_extension` opens a configured store page or the browser's extension settings; installation requires confirmation in the browser. The assigned Chrome Store ID `kglhakgapoegbnnbobnmnebmbljehcid` is included in the companion defaults; additional store IDs can be configured in its allowlist. Configuration is stored at `~/.browpilot/config.json`; an existing `~/.claude-browser` directory is moved there on first start.
 
 ## Grok and other remote clients
 
@@ -49,7 +49,7 @@ Daily default directories are refused by developer launch. Normal profile startu
 
 ## Store status
 
-Chrome: version 0.2.1 is pending review after correcting the 0.2.0 permissions rejection. Automatic publication after approval is enabled. Assigned listing: https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid (not available until approval).
+Chrome: version 0.2.1 is published at https://chromewebstore.google.com/detail/kglhakgapoegbnnbobnmnebmbljehcid. Version 0.2.2 (same permissions) is pending review with automatic publication after approval.
 
 Edge: a submission ZIP is available in the release; no Edge store approval or publication is claimed.
 
@@ -57,7 +57,7 @@ See [review setup instructions](TESTING.md) for a direct MCP test without an AI 
 
 ## Validation and privacy
 
-Version 0.2.1 passed 337 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
+Version 0.2.2 passed 442 automated tests, workspace type checks and builds. Real Linux Chromium verified offline installation evidence, cold startup/pairing, MCP tab control, automatic restart and evaluation in a second independent extension worker. Windows/macOS and actual Edge have not received equivalent live testing.
 
 See [Privacy policy](privacy.md). Tool results reach the MCP client and its AI provider; remote access also uses the tunnel/proxy you configure. No built-in analytics or hosted collection service is included.
 
