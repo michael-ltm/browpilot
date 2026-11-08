@@ -1,4 +1,4 @@
-# Browpilot 0.2.2 review instructions
+# Browpilot 0.2.3 review instructions
 
 Browpilot connects a user-selected local Chrome profile to MCP tools. The extension requires a companion running on the same computer. No Browpilot account, paid subscription, or hosted Browpilot service is required. Any AI provider account belongs to the client; reviewers can call tools directly from a stdio MCP client without an AI account.
 
@@ -8,7 +8,7 @@ Browpilot connects a user-selected local Chrome profile to MCP tools. The extens
 2. Install the released companion:
 
    ```sh
-   npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.2/john523100-browpilot-0.2.2.tgz
+   npm install -g https://github.com/michael-ltm/browpilot/releases/download/v0.2.3/john523100-browpilot-0.2.3.tgz
    ```
 
 3. Configure a stdio MCP client to execute `browpilot` with no arguments. The MCP client starts the companion automatically. For supported AI clients, `browpilot install codex` or `browpilot install claude` registers it; restart that client afterwards. `browpilot config codex` and `browpilot config claude` print configuration if automatic registration is unavailable.
@@ -20,7 +20,8 @@ Browpilot connects a user-selected local Chrome profile to MCP tools. The extens
 2. Call `browser_open_instance` with `{"id":"<exact id returned above>","timeoutMs":60000}`. This opens the selected browser if needed and opens a local pairing tab. Allow that tab to complete pairing. The popup should show the connected companion.
 3. Call `browser_get_tabs` with `{}`. The returned list should contain the selected profile's actual open tabs.
 4. Open a harmless page such as `https://example.com` in that profile. Use the MCP client's displayed tool schema to call `browser_snapshot` for that page, then take a screenshot or inspect its text. Chrome displays its standard debugger notice while debugging is attached.
-5. Close that test profile normally, then repeat a read call from the same selected MCP session. Browpilot can reopen an identified local profile and reconnect. Refresh tab IDs and snapshots after restarting.
+5. Call `browser_extensions` with `{"action":"list"}`. It returns the installed extensions of the selected profile (this is the only use of the `management` permission added in 0.2.3; `reload`, `enable`, `disable` and `open_options` act only on an extension id you pass).
+6. Close that test profile normally, then repeat a read call from the same selected MCP session. Browpilot can reopen an identified local profile and reconnect. Refresh tab IDs and snapshots after restarting.
 
 For a nonstandard browser installation, `browser_register_instance` accepts its browser type, executable, user-data directory and profile directory. No browser credentials should be sent to us.
 
