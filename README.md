@@ -61,4 +61,4 @@ Version 0.2.3 passed 469 automated tests and workspace type checks on Linux (Win
 
 See [Privacy policy](privacy.md). Tool results reach the MCP client and its AI provider; remote access also uses the tunnel/proxy you configure. No built-in analytics or hosted collection service is included.
 
-Report issues in [this repository](https://github.com/michael-ltm/browpilot/issues), without private browsing data. Browpilot is independent of OpenAI, Anthropic, xAI, Google and Microsoft. Distributed under the MIT license.
+Report issues in [this repository](https://github.com/michael-ltm/browpilot/issues), without private browsing data. Browpilot is independent of OpenAI, Anthropic, xAI, Google and Microsoft. Distributed under the Apache-2.0 license. Source code: [michael-ltm/browpilot-src](https://github.com/michael-ltm/browpilot-src).
